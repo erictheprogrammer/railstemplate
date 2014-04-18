@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foodie Finder</title>
+    <%= stylesheet_link_tag  "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"           content="Jonathan Lau"/>
+    <meta name="designer"         content="Jonathan Lau"/>
+    <%= favicon_link_tag 'foodiefinder.png' %>
+    <%= display_meta_tags :site => 'Foodie Finder' %>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pompiere">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700italic,700|Titillium+Web:400,600,400italic,600italic,700,700italic" media="all" />
+<body>
+      <div class="container">
+        <div class="navbar navbar-default navbar-static-top navbar-fixed-top navbar-secondary" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <%= link_to(image_tag("foodiefinder.png", :width => 150), "/", :class=>'navbar-logo') %>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="/lunches">View Lunch Groups</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+	<%= yield %> 
+	<!-- <footer>
+	<div class="footer" id="footer">
+	    <footer class="container">
+        <div class="row">
+  	      <div class="col-md-4">
+          <ul>
+  	      <li><h3>FoodieFinder</h3></li>
+  	      <li><a href="#">Home</a></li>
+  	      <li><a href="#">How It Works</a></li>
+  	      </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+            <li><h3>Let's keep in touch</h3></li>
+            <li><p>Contact us at <a href="mailto:jlau@visiblemeasures.com" class="email">jlau@visiblemeasures.com</a></li>
+            <li>
+              <a class="fa fa-twitter"></a>
+              <a class="fa fa-facebook"></a>
+              <a class="fa fa-linkedin"></a>
+            </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+            <li><h3>Interested in receiving updates on latest lunches?</h3></li>
+            <li><a class='btn btn-primary btn-medium' id="sign-up-footer" href'/signups/new'>Sign Up Now &raquo;</a></li>
+            <li>
+              <h5>Copyright © 2014 FoodieFinder. All rights reserved.</h5>
+            </li>
+            </ul>
+          </div>
+        </div>
+	    </footer>
+	</div>
+	</footer> -->
+</body>
+</html>
